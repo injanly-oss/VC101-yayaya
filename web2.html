@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>張小潔｜臺灣AI人培星球創辦人</title>
+  <meta name="description" content="張小潔｜臺灣AI人培星球創辦人。AI人才培育推動者、政府與產業課程顧問、AI賦能專家。" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            techBlue: '#0D2B6F',
+            premiumPurple: '#5A5ACD',
+            mint: '#00C4B3',
+            mist: '#F7F8FA',
+            gold: '#FFD700',
+            accentRed: '#E63946',
+            brightBlue: '#00A9E0',
+            neonPurple: '#B19CD9'
+          },
+          boxShadow: {
+            glow: '0 0 50px rgba(13, 43, 111, 0.18)',
+            mintGlow: '0 0 42px rgba(0, 196, 179, 0.22)'
+          },
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans TC', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.4/css/all.min.css" integrity="sha512-d9Dtn1nTjhWAi1g8P4Xkg4qopGErim/6b3VbF12B8Nx0cdoZW0G4Kec4Dq9ENjDE6Nwb+dYt7FfQ0P7M8wv6xA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    :root {
+      --tech-blue: #0D2B6F;
+      --premium-purple: #5A5ACD;
+      --mint: #00C4B3;
+      --mist: #F7F8FA;
+      --gold: #FFD700;
+      --accent-red: #E63946;
+      --bright-blue: #00A9E0;
+      --neon-purple: #B19CD9;
+      --ink: #1F2937;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 18%, rgba(90, 90, 205, 0.14), transparent 32%),
+        radial-gradient(circle at 85% 8%, rgba(13, 43, 111, 0.12), transparent 28%),
+        radial-gradient(circle at 78% 72%, rgba(0, 169, 224, 0.10), transparent 34%),
+        linear-gradient(135deg, #ffffff 0%, #F7F8FA 40%, #E5E7EB 100%);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: -3;
+      background-image:
+        linear-gradient(rgba(13, 43, 111, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(13, 43, 111, 0.05) 1px, transparent 1px);
+      background-size: 54px 54px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.88), rgba(0,0,0,.25), transparent);
+      pointer-events: none;
+    }
+
+    .bg-blue-50 { background-color: rgba(93, 193, 242, 0.15) !important; }
+    .bg-purple-50 { background-color: rgba(90, 90, 205, 0.14) !important; }
+    .hover\:bg-blue-50:hover { background-color: rgba(93, 193, 242, 0.15) !important; }
+    .hover\:bg-purple-50:hover { background-color: rgba(90, 90, 205, 0.14) !important; }
+    .border-blue-100 { border-color: rgba(93, 193, 242, 0.3) !important; }
+    .border-blue-100\/80 { border-color: rgba(93, 193, 242, 0.25) !important; }
+    .bg-slate-100 { background-color: #F7F8FA !important; }
+    .bg-consult-gradient { background-image: linear-gradient(135deg, rgba(255,255,255,1), rgba(93,193,242,0.24), rgba(90,90,205,0.18)); }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(247, 248, 250, 0.8);
+      box-shadow: 0 24px 80px rgba(13, 43, 111, 0.08);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+    }
+
+    .gradient-text {
+      background: linear-gradient(120deg, var(--tech-blue) 0%, var(--premium-purple) 32%, var(--gold) 72%, var(--bright-blue) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .gradient-border {
+      position: relative;
+      background: linear-gradient(#ffffff, #ffffff) padding-box,
+                  linear-gradient(135deg, rgba(13,43,111,.72), rgba(90,90,205,.55), rgba(0,196,179,.45)) border-box;
+      border: 1px solid transparent;
+    }
+
+    .premium-card {
+      transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+    }
+
+    .premium-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 28px 80px rgba(13, 43, 111, 0.16), 0 0 36px rgba(0, 196, 179, 0.12);
+      border-color: rgba(13, 43, 111, 0.38);
+    }
+
+    .cta-btn {
+      position: relative;
+      overflow: hidden;
+      transition: transform .3s ease, box-shadow .3s ease, color .3s ease;
+    }
+
+    .cta-btn::after {
+      content: 'Status: Ready to Connect';
+      position: absolute;
+      left: 50%;
+      bottom: -26px;
+      transform: translateX(-50%);
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+      color: var(--mint);
+      opacity: 0;
+      transition: opacity .3s ease, bottom .3s ease;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 38px rgba(0, 196, 179, 0.26), 0 16px 42px rgba(13, 43, 111, 0.14);
+    }
+
+    .orbit-node {
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--tech-blue), var(--mint));
+      box-shadow: 0 0 22px rgba(13,43,111,.28);
+      animation: floatNode 6s ease-in-out infinite;
+    }
+
+    .data-line {
+      position: absolute;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(13,43,111,.34), rgba(0,196,179,.22), transparent);
+      animation: dataFlow 5.2s linear infinite;
+      opacity: .7;
+    }
+
+    .hero-visual {
+      background:
+        radial-gradient(circle at 50% 40%, rgba(13,43,111,.14), transparent 36%),
+        radial-gradient(circle at 68% 68%, rgba(90,90,205,.12), transparent 30%),
+        rgba(255,255,255,.74);
+    }
+
+    .typing-cursor {
+      display: inline-block;
+      width: 1px;
+      height: 1.05em;
+      margin-left: 4px;
+      background: var(--tech-blue);
+      vertical-align: -0.14em;
+      animation: elegantBlink 1.35s ease-in-out infinite;
+    }
+
+    @keyframes elegantBlink {
+      0%, 100% { opacity: .18; }
+      50% { opacity: .85; }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-enter {
+      animation: heroEnter .95s cubic-bezier(.2,.8,.2,1) both;
+    }
+
+    @keyframes heroEnter {
+      from { opacity: 0; transform: translateY(24px) scale(.985); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease;
+    }
+
+    .mobile-menu.open { max-height: 360px; }
+  </style>
+</head>
+
+<body class="font-sans antialiased selection:bg-techBlue selection:text-white">
+  <!-- Ambient AI background -->
+  <div class="pointer-events-none fixed inset-0 -z-20 overflow-hidden" aria-hidden="true">
+    <div class="data-line top-[18%] left-0 w-[42rem]"></div>
+    <div class="data-line top-[43%] left-0 w-[35rem]" style="animation-delay: 1.4s"></div>
+    <div class="data-line top-[72%] left-0 w-[48rem]" style="animation-delay: 2.6s"></div>
+    <span class="orbit-node left-[8%] top-[28%]"></span>
+    <span class="orbit-node left-[86%] top-[22%]" style="animation-delay: 1.2s"></span>
+    <span class="orbit-node left-[74%] top-[78%]" style="animation-delay: 2.1s"></span>
+    <span class="orbit-node left-[18%] top-[82%]" style="animation-delay: 3.2s"></span>
+  </div>
+
+  <!-- Navigation -->
+  <header class="fixed inset-x-0 top-0 z-50 px-4 pt-4">
+    <nav class="glass mx-auto max-w-7xl rounded-2xl px-5 py-3">
+      <div class="flex items-center justify-between">
+        <a href="#home" class="flex items-center gap-3 font-black tracking-tight text-slate-900">
+          <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-techBlue via-premiumPurple to-mint text-white shadow-glow">AI</span>
+          <span class="leading-tight">張小潔<span class="hidden text-slate-400 sm:inline">｜AI Talent Planet</span></span>
+        </a>
+
+        <div class="hidden items-center gap-8 text-sm font-semibold text-slate-600 md:flex">
+          <a class="nav-link hover:text-techBlue" href="#home">首頁</a>
+          <a class="nav-link hover:text-techBlue" href="#about">關於張小潔</a>
+          <a class="nav-link hover:text-techBlue" href="#training">AI 人才培育</a>
+          <a class="nav-link hover:text-techBlue" href="#cases">實戰案例</a>
+          <a class="rounded-full bg-techBlue px-5 py-2.5 text-white shadow-glow hover:bg-brightBlue" href="#consult">預約諮詢</a>
+        </div>
+
+        <button id="menuBtn" class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white/70 text-slate-800 md:hidden" aria-label="開啟選單">
+          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobileMenu" class="mobile-menu md:hidden">
+        <div class="grid gap-2 pt-4 text-sm font-semibold text-slate-700">
+          <a class="mobile-link rounded-xl px-3 py-3 hover:bg-blue-50" href="#home">首頁</a>
+          <a class="mobile-link rounded-xl px-3 py-3 hover:bg-blue-50" href="#about">關於張小潔</a>
+          <a class="mobile-link rounded-xl px-3 py-3 hover:bg-blue-50" href="#training">AI 人才培育</a>
+          <a class="mobile-link rounded-xl px-3 py-3 hover:bg-blue-50" href="#cases">實戰案例</a>
+          <a class="mobile-link rounded-xl px-3 py-3 hover:bg-blue-50" href="#consult">預約諮詢</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="relative flex min-h-screen items-center px-5 pb-20 pt-32 sm:pt-36">
+      <div class="mx-auto grid w-full max-w-7xl items-center gap-14 lg:grid-cols-[1.08fr_.92fr]">
+        <div class="hero-enter">
+          <div class="mb-7 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white/70 px-4 py-2 text-sm font-bold text-techBlue shadow-sm backdrop-blur">
+            <span class="h-2 w-2 rounded-full bg-mint shadow-mintGlow"></span>
+            Taiwan AI Talent Planet Founder
+          </div>
+
+          <h1 class="max-w-5xl text-5xl font-black leading-[1.03] tracking-[-0.05em] text-slate-950 sm:text-6xl lg:text-7xl xl:text-8xl">
+            <span class="gradient-text">Transform Future Skills into Present Power</span>
+          </h1>
+
+          <p class="mt-7 text-2xl font-bold tracking-tight text-slate-700 sm:text-3xl">Empowering Talent. Transforming Futures.</p>
+
+          <p class="mt-6 min-h-[2.6rem] text-lg font-semibold text-slate-500 sm:text-xl">
+            <span id="typewriter" class="text-techBlue"></span><span class="typing-cursor"></span>
+          </p>
+
+          <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+            <a href="https://calendar.app.google/8VjSTWTmdcC9xLbf6" target="_blank" rel="noopener noreferrer" class="cta-btn gradient-border rounded-2xl px-7 py-4 text-center font-black text-techBlue shadow-glow">
+              <span>預約諮詢</span>
+            </a>
+            <a href="#training" class="cta-btn gradient-border rounded-2xl px-7 py-4 text-center font-black text-slate-800">
+              <span>了解 AI 人才培育</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual glass relative min-h-[430px] overflow-hidden rounded-[2.5rem] p-6 hero-enter" style="animation-delay: .12s">
+          <div class="absolute inset-8 rounded-[2rem] border border-blue-100/80"></div>
+          <div class="absolute left-8 right-8 top-16 h-px bg-gradient-to-r from-transparent via-techBlue/30 to-transparent"></div>
+          <div class="absolute bottom-14 left-8 right-8 h-px bg-gradient-to-r from-transparent via-mint/30 to-transparent"></div>
+
+          <div class="relative z-10 flex h-full min-h-[380px] flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-xs font-black uppercase tracking-[.28em] text-slate-400">AI Enablement OS</p>
+                <p class="mt-2 text-2xl font-black text-slate-900">Talent × Industry × Future</p>
+              </div>
+              <div class="rounded-2xl bg-white/70 px-4 py-3 text-sm font-black text-mint shadow-sm">LIVE</div>
+            </div>
+
+            <div class="grid gap-4">
+              <div class="premium-card rounded-3xl border border-white/80 bg-white/70 p-5 shadow-sm backdrop-blur">
+                <div class="flex items-center justify-between gap-4">
+                  <div>
+                    <p class="text-sm font-black text-slate-900">需求洞察</p>
+                    <p class="mt-1 text-sm text-slate-500">從場域問題定義人才能力</p>
+                  </div>
+                  <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-black text-techBlue">01</span>
+                </div>
+              </div>
+              <div class="premium-card rounded-3xl border border-white/80 bg-white/70 p-5 shadow-sm backdrop-blur">
+                <div class="flex items-center justify-between gap-4">
+                  <div>
+                    <p class="text-sm font-black text-slate-900">AI 工具應用</p>
+                    <p class="mt-1 text-sm text-slate-500">生成式 AI、AI Agent、自動化工具</p>
+                  </div>
+                  <span class="rounded-full bg-purple-50 px-3 py-1 text-xs font-black text-premiumPurple">02</span>
+                </div>
+              </div>
+              <div class="premium-card rounded-3xl border border-white/80 bg-white/70 p-5 shadow-sm backdrop-blur">
+                <div class="flex items-center justify-between gap-4">
+                  <div>
+                    <p class="text-sm font-black text-slate-900">成果落地</p>
+                    <p class="mt-1 text-sm text-slate-500">讓能力變成組織可感的升級力量</p>
+                  </div>
+                  <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-black text-mint">03</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <span class="orbit-node left-[15%] top-[19%]"></span>
+          <span class="orbit-node right-[18%] top-[42%]" style="animation-delay: 1s"></span>
+          <span class="orbit-node left-[47%] bottom-[16%]" style="animation-delay: 2s"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="px-5 py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal grid gap-12 lg:grid-cols-[.9fr_1.1fr] lg:items-start">
+          <div>
+            <p class="mb-3 text-sm font-black uppercase tracking-[.25em] text-techBlue">About</p>
+            <h2 class="text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">關於張小潔</h2>
+            <p class="mt-6 text-lg leading-9 text-slate-600">
+              張小潔是臺灣AI人培星球創辦人，深耕人才培育與產業發展超過 20 年，長期站在政府政策、產業需求與人才成長的交會點，協助組織把 AI 從趨勢語言轉化為可落地、可擴散、可被看見的實戰能力。
+            </p>
+          </div>
+
+          <div class="glass rounded-[2rem] p-7 sm:p-9">
+            <p class="text-lg leading-9 text-slate-600">
+              曾擔任資策會、中衛發展中心等財團法人單位之人才培育課程顧問，熟悉從人才需求分析、課程設計到實務導入的完整歷程，並參與經濟部中小企業處、經濟部商業發展署及數位發展部數位產業署等多項人才發展與產業升級計畫。
+            </p>
+            <p class="mt-5 text-lg leading-9 text-slate-600">
+              從 OTOP、AI GO、資服顧問到青年AI養成班，橫跨中小企業輔導、數位轉型、AI應用人才培育與跨域創新實踐；同時具備 ISO14064 與 ISO14067 專業背景，能以 AI × 產業 × 永續的整合視角，設計真正貼近未來競爭力的人才方案。
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="reveal premium-card gradient-border rounded-3xl p-6">
+            <p class="text-4xl font-black text-techBlue">20+</p>
+            <p class="mt-3 font-bold text-slate-700">年人才培育經驗</p>
+          </div>
+          <div class="reveal premium-card gradient-border rounded-3xl p-6">
+            <p class="text-4xl font-black text-premiumPurple">Gov</p>
+            <p class="mt-3 font-bold text-slate-700">多項政府專案規劃經驗</p>
+          </div>
+          <div class="reveal premium-card gradient-border rounded-3xl p-6">
+            <p class="text-4xl font-black text-mint">AI×ESG</p>
+            <p class="mt-3 font-bold text-slate-700">AI × 產業 × 永續整合視角</p>
+          </div>
+          <div class="reveal premium-card gradient-border rounded-3xl p-6">
+            <p class="text-4xl font-black text-slate-900">Action</p>
+            <p class="mt-3 font-bold text-slate-700">產業實戰導向課程設計</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Training -->
+    <section id="training" class="px-5 py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal mx-auto max-w-3xl text-center">
+          <p class="mb-3 text-sm font-black uppercase tracking-[.25em] text-techBlue">AI Talent Enablement</p>
+          <h2 class="text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">AI 人才培育</h2>
+          <p class="mt-5 text-lg leading-8 text-slate-600">不是單純上課，而是把 AI 能力嵌入工作流程、產業場域與組織升級路徑。</p>
+        </div>
+
+        <div class="mt-14 grid gap-7 lg:grid-cols-2">
+          <article class="reveal premium-card glass rounded-[2rem] p-8">
+            <div class="mb-6 inline-flex rounded-2xl bg-blue-50 px-4 py-2 text-sm font-black text-techBlue">01｜產業應用人才培育</div>
+            <h3 class="text-2xl font-black text-slate-950">讓每個產業，都長出自己的 AI 應用能力</h3>
+            <p class="mt-5 text-lg leading-9 text-slate-600">
+              聚焦商業服務業與製造業，培養具備 AI 應用思維、場域理解能力與跨域整合能力的實戰人才。課程從真實場域需求出發，結合生成式 AI、AI Agent、自動化工具與數據應用，協助學員提升服務創新、流程優化、營運效率與決策能力。
+            </p>
+          </article>
+
+          <article class="reveal premium-card glass rounded-[2rem] p-8">
+            <div class="mb-6 inline-flex rounded-2xl bg-purple-50 px-4 py-2 text-sm font-black text-premiumPurple">02｜開發專業人才培育</div>
+            <h3 class="text-2xl font-black text-slate-950">讓技術團隊，加速從原型走向產品化</h3>
+            <p class="mt-5 text-lg leading-9 text-slate-600">
+              聚焦資服業者與技術團隊，培養具備 AI 開發、導入與產品化能力的實戰人才。透過 Vibe Coding、AI 輔助開發、雲端平台與跨系統整合，協助開發人員提升需求理解、快速原型驗證、產品迭代與跨域應用能力，加速技術落地。
+            </p>
+          </article>
+        </div>
+
+        <div class="reveal mt-12 glass rounded-[2rem] p-5 sm:p-7">
+          <div class="grid items-center gap-4 text-center sm:grid-cols-4">
+            <div class="rounded-2xl bg-white/70 p-5 font-black text-slate-800 shadow-sm">需求洞察</div>
+            <div class="hidden text-2xl font-black text-techBlue sm:block">→</div>
+            <div class="rounded-2xl bg-white/70 p-5 font-black text-slate-800 shadow-sm sm:col-span-1">AI 工具應用</div>
+            <div class="hidden text-2xl font-black text-premiumPurple sm:block">→</div>
+          </div>
+          <div class="mt-4 grid items-center gap-4 text-center sm:grid-cols-4">
+            <div class="rounded-2xl bg-white/70 p-5 font-black text-slate-800 shadow-sm sm:col-start-2">場域實作</div>
+            <div class="hidden text-2xl font-black text-mint sm:block">→</div>
+            <div class="rounded-2xl bg-gradient-to-br from-techBlue to-premiumPurple p-5 font-black text-white shadow-glow">成果落地</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cases -->
+    <section id="cases" class="px-5 py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+          <div>
+            <p class="mb-3 text-sm font-black uppercase tracking-[.25em] text-techBlue">Selected Works</p>
+            <h2 class="text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">實戰案例與專案經驗</h2>
+          </div>
+          <p class="max-w-xl text-lg leading-8 text-slate-600">從地方產業到青年就業，從 AI 推廣到資服顧問能量升級，將政策目標轉化為產業看得懂、人才做得到的行動方案。</p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <article class="reveal premium-card gradient-border rounded-[2rem] p-7">
+            <h3 class="text-2xl font-black text-slate-950">OTOP</h3>
+            <p class="mt-4 leading-7 text-slate-600">地方特色產業與中小企業創新輔導，協助在地品牌放大特色、連結市場與數位轉型契機。</p>
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-techBlue">產業轉型</span>
+              <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-mint">政府專案</span>
+            </div>
+          </article>
+
+          <article class="reveal premium-card gradient-border rounded-[2rem] p-7">
+            <h3 class="text-2xl font-black text-slate-950">AI GO</h3>
+            <p class="mt-4 leading-7 text-slate-600">AI 應用推廣與產業導入，降低企業理解門檻，讓 AI 從展示走向實際流程改善。</p>
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-techBlue">AI賦能</span>
+              <span class="rounded-full bg-purple-50 px-3 py-1 text-xs font-bold text-premiumPurple">數位轉型</span>
+            </div>
+          </article>
+
+          <article class="reveal premium-card gradient-border rounded-[2rem] p-7">
+            <h3 class="text-2xl font-black text-slate-950">資服顧問</h3>
+            <p class="mt-4 leading-7 text-slate-600">協助資服業者提升 AI 服務與顧問能量，強化提案、導入、產品化與跨域整合能力。</p>
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-techBlue">AI賦能</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-700">人才培育</span>
+            </div>
+          </article>
+
+          <article class="reveal premium-card gradient-border rounded-[2rem] p-7">
+            <h3 class="text-2xl font-black text-slate-950">青年AI養成班</h3>
+            <p class="mt-4 leading-7 text-slate-600">培育青年 AI 應用與就業實戰能力，連結學習、實作、職能養成與產業需求。</p>
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-mint">人才培育</span>
+              <span class="rounded-full bg-purple-50 px-3 py-1 text-xs font-bold text-premiumPurple">政府專案</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Solutions -->
+    <section id="featured-solutions" class="px-5 py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal mb-10 text-center">
+          <p class="mb-3 text-sm font-black uppercase tracking-[.25em] text-techBlue">核心產品與技術解決方案</p>
+          <h2 class="text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">打造 Vibe Coding 的成長與自動化加速器</h2>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-3">
+          <a href="https://courses.taiwanmds.com/product/information?p=02c0c7b9ec7b11f0b3480242ac110002" target="_blank" rel="noopener noreferrer" class="premium-card glass group rounded-[2rem] border border-slate-200/70 bg-white/80 p-7 transition hover:-translate-y-1 hover:border-techBlue hover:shadow-glow">
+            <div class="flex h-14 w-14 items-center justify-center rounded-3xl bg-slate-950 text-white shadow-sm">
+              <i class="fab fa-github text-2xl"></i>
+            </div>
+            <h3 class="mt-6 text-2xl font-black text-slate-950">大師級Vibe Coding資服開發人員培訓課程</h3>
+            <p class="mt-4 text-base leading-7 text-slate-600">訂閱Vibe Coding行銷數據分析學習圈，跟著我們一同走入行銷數據分析與vibe coding自動化的世界。</p>
+          </a>
+
+          <a href="https://judgai.com/" target="_blank" rel="noopener noreferrer" class="premium-card glass group rounded-[2rem] border border-slate-200/70 bg-white/80 p-7 transition hover:-translate-y-1 hover:border-premiumPurple hover:shadow-glow">
+            <div class="flex h-14 w-14 items-center justify-center rounded-3xl bg-premiumPurple text-white shadow-sm">
+              <i class="fas fa-user-tie text-2xl"></i>
+            </div>
+            <h3 class="mt-6 text-2xl font-black text-slate-950">專屬於CEO的VIP Vibe Coding培訓課程</h3>
+            <p class="mt-4 text-base leading-7 text-slate-600">從經驗、法條到正確說明，奇點讓每位保險專業者擁有一位懂法的科技夥伴。</p>
+          </a>
+
+          <a href="https://judgai.com/saymind" target="_blank" rel="noopener noreferrer" class="premium-card glass group rounded-[2rem] border border-slate-200/70 bg-white/80 p-7 transition hover:-translate-y-1 hover:border-mint hover:shadow-glow">
+            <div class="flex h-14 w-14 items-center justify-center rounded-3xl bg-mint text-white shadow-sm">
+              <i class="fas fa-rocket text-2xl"></i>
+            </div>
+            <h3 class="mt-6 text-2xl font-black text-slate-950">小白也會的快速上手 Vibe Coding</h3>
+            <p class="mt-4 text-base leading-7 text-slate-600">使用 LangChain 搭建的 RAG 系統，可上傳 PDF 並進行精準問答。</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dependency Icons and Contact Form -->
+    <section id="dependencies" class="px-5 pb-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal mb-8 rounded-[2rem] border border-slate-200/70 bg-white/80 p-8 shadow-sm">
+          <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <p class="mb-3 text-sm font-black uppercase tracking-[.25em] text-techBlue">外部依賴庫 (Dependencies)</p>
+              <h3 class="text-3xl font-black text-slate-950">多元社群圖示排列展示</h3>
+              <p class="mt-3 max-w-2xl text-base leading-7 text-slate-600">展示 LINE、Facebook、LinkedIn 與 GitHub 作為外部依賴庫的圖示配置，並提供聯絡表單快速導向。</p>
+            </div>
+
+            <div class="grid grid-cols-4 gap-4 rounded-3xl bg-slate-100 p-4 text-center text-slate-800 shadow-inner sm:grid-cols-4">
+              <a href="#" class="flex flex-col items-center justify-center gap-2 rounded-3xl bg-white px-4 py-4 text-slate-700 transition hover:bg-blue-50">
+                <i class="fab fa-line text-2xl text-[#00c300]"></i>
+                <span class="text-xs font-bold">LINE</span>
+              </a>
+              <a href="#" class="flex flex-col items-center justify-center gap-2 rounded-3xl bg-white px-4 py-4 text-slate-700 transition hover:bg-blue-50">
+                <i class="fab fa-facebook-f text-2xl text-[#1877f2]"></i>
+                <span class="text-xs font-bold">Facebook</span>
+              </a>
+              <a href="#" class="flex flex-col items-center justify-center gap-2 rounded-3xl bg-white px-4 py-4 text-slate-700 transition hover:bg-blue-50">
+                <i class="fab fa-linkedin-in text-2xl text-[#0a66c2]"></i>
+                <span class="text-xs font-bold">LinkedIn</span>
+              </a>
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center gap-2 rounded-3xl bg-white px-4 py-4 text-slate-700 transition hover:bg-blue-50">
+                <i class="fab fa-github text-2xl"></i>
+                <span class="text-xs font-bold">GitHub</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-8 rounded-[2rem] bg-gradient-to-r from-techBlue to-premiumPurple p-7 text-white shadow-glow">
+            <div class="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+              <div>
+                <p class="text-sm font-semibold uppercase tracking-[.28em] text-white/80">聯絡表單</p>
+                <h4 class="mt-3 text-2xl font-black">填寫需求表單</h4>
+                <p class="mt-3 max-w-2xl text-base leading-7 text-white/90">直接連結到 Google Form，讓您更快速提交需求並啟動專案溝通。</p>
+              </div>
+              <a href="https://forms.gle/RavH4n7wVPxNMFmV9" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-4 text-sm font-black text-slate-950 transition hover:bg-slate-100">
+                前往填寫需求表單
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consult -->
+    <section id="consult" class="px-5 py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal relative overflow-hidden rounded-[2.5rem] bg-consult-gradient p-8 shadow-glow sm:p-12 lg:p-16">
+          <div class="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-techBlue/10 blur-3xl"></div>
+          <div class="absolute -bottom-16 left-10 h-64 w-64 rounded-full bg-mint/10 blur-3xl"></div>
+          <div class="relative z-10 grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div>
+              <p class="mb-3 text-sm font-black uppercase tracking-[.25em] text-techBlue">Connect</p>
+              <h2 class="max-w-4xl text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">讓 AI 人才培育，成為組織升級的起點</h2>
+              <p class="mt-6 max-w-3xl text-lg leading-9 text-slate-600">
+                邀請企業、政府單位、訓練機構與產業夥伴預約諮詢，一起規劃符合產業需求的 AI 人才培育方案，讓未來能力不只被討論，而是被真正部署。
+              </p>
+            </div>
+            <a href="https://calendar.app.google/8VjSTWTmdcC9xLbf6" target="_blank" rel="noopener noreferrer" class="cta-btn gradient-border rounded-2xl px-9 py-5 text-center text-lg font-black text-techBlue shadow-glow">
+              <span>預約諮詢</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="px-5 pb-10">
+    <div class="mx-auto max-w-7xl border-t border-slate-200/70 pt-8 text-center text-sm font-medium text-slate-500">
+      © <span id="year"></span> 張小潔｜臺灣AI人培星球. Transform Future Skills into Present Power.
+    </div>
+  </footer>
+
+  <script>
+    // Editable global settings
+    const CONSULT_URL = 'https://calendar.app.google/8VjSTWTmdcC9xLbf6';
+    const TYPEWRITER_TEXT = 'Until AI Talent Becomes Every Industry’s Common Sense';
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    });
+
+    // Smooth scroll with fixed-header offset
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (event) {
+        const targetId = this.getAttribute('href');
+        if (!targetId || targetId === '#') return;
+        const target = document.querySelector(targetId);
+        if (!target) return;
+        event.preventDefault();
+        const offset = 92;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+
+    // Typewriter effect
+    const typewriterEl = document.getElementById('typewriter');
+    let charIndex = 0;
+    let deleting = false;
+
+    function typeLoop() {
+      const speed = deleting ? 30 : 58;
+      const pause = deleting ? 500 : 1500;
+
+      if (!deleting) {
+        typewriterEl.textContent = TYPEWRITER_TEXT.slice(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === TYPEWRITER_TEXT.length) {
+          deleting = true;
+          setTimeout(typeLoop, pause);
+          return;
+        }
+      } else {
+        typewriterEl.textContent = TYPEWRITER_TEXT.slice(0, charIndex - 1);
+        charIndex--;
+        if (charIndex === 0) {
+          deleting = false;
+          setTimeout(typeLoop, 650);
+          return;
+        }
+      }
+      setTimeout(typeLoop, speed);
+    }
+    typeLoop();
+
+    // Scroll reveal
+    const revealItems = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    revealItems.forEach(item => observer.observe(item));
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Ensure all consultation links stay aligned with the editable global URL
+    document.querySelectorAll(`a[href="${CONSULT_URL}"]`).forEach(link => {
+      link.href = CONSULT_URL;
+    });
+  </script>
+</body>
+</html>
